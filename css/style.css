@@ -69,9 +69,7 @@ h1 {
 }
 
 
-#chat h1 {
-  font-size: 9px;
-}
+
 /* #5 app bar images */
 #channels h1 img {
   margin-top: auto;
@@ -88,6 +86,9 @@ h1 {
   text-decoration: none;
 }
 
+small {
+  font-size: 9px;
+}
 /* CHANNELS LIST */
 
 /* #4 #sweat #channels */
