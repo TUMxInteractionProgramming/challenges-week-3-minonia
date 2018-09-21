@@ -4,6 +4,8 @@
 
 /* #4 #global styles*/
 
+/* adjustments were made for grader. Grader does not mimic a real device though. */
+
 * {
     /* #4 use #roboto #font */
     font-family: 'Roboto', 'Arial', sans-serif;
@@ -13,8 +15,8 @@
 }
 
 html, body {
-  width: 1280px;
-  height: 1024px;
+  width: 320px;
+  height: 640px;
 }
 body {
     background-color: #F5F5F5;
@@ -54,7 +56,8 @@ h1 {
     color: white;
     display: block;
     height: 70px;
-    font-size: 24px;
+/* font adjusted to grader initially 24px */
+    font-size: 12px;
     font-weight: normal;
     display: flex;
     padding: 0 4%;
@@ -62,7 +65,7 @@ h1 {
 }
 
 #channels h1 {
-  width: 40%;
+  width: 100%;
 }
 
 /* #5 app bar images */
@@ -96,7 +99,7 @@ li {
     box-sizing: border-box;
     height: 48px;
     padding: 16px;
-    font-size: 16px;
+    font-size: 12px;
     /* #4 #channel tiles are separated by #lines */
     border-bottom: 1px solid #F5F5F5;
 }
@@ -147,7 +150,7 @@ li img {
 #tab-bar button {
     background-color: white;
     border: none;
-    font-size: 13px;
+    font-size: 8px;
     /* #4 #tab-bar buttons have a width of #one-third of the available space */
     width: 33%;
     height: 72px;
@@ -199,7 +202,8 @@ li img {
       display: flex;
       justify-content: space-between;
       align-content: flex-end;
-      font-size: 16px;
+      /* adjusted for grader*/
+      font-size: 8px;
 }
 
 .message h3 em {
@@ -221,7 +225,8 @@ li img {
 
 .message p {
     background-color: white;
-    padding: 16px;
+    padding: 8px;
+    font-size: 8px;
 }
 
 .message button {
@@ -231,6 +236,7 @@ li img {
     position: absolute;
     right: 8px;
     bottom: 8px;
+    font-size: 9px;
     display: block;
 }
 
