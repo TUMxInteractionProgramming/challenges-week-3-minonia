@@ -7,12 +7,15 @@
 * {
     /* #4 use #roboto #font */
     font-family: 'Roboto', 'Arial', sans-serif;
-
      /* #4 #sweat take care of #spacing between various elements */
     margin: 0;
     padding: 0;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
 body {
     background-color: #F5F5F5;
 }
@@ -22,7 +25,28 @@ button, strong {
     text-transform: uppercase;
 }
 
+/* positioning : APP BAR,  CHANNELS LIST and TAB BAR*/
 
+#channels ul{
+  position: relative;
+  background-color: red;
+  overflow: auto;
+  position: absolute;
+  top: 70px;
+  bottom: 72px;
+  width: 40%;
+}
+
+
+
+
+#chat{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 60%;
+  height: 100%;
+}
 
 /* APP BAR */
 
@@ -30,7 +54,35 @@ button, strong {
 h1 {
     background-color: #3F51B5;
     color: white;
+    display: block;
+    height: 70px;
+    font-size: 24px;
+    font-weight: normal;
+    display: flex;
+    padding: 0 4%;
+    line-height: 70px;
 }
+
+#channels h1 {
+  width: 40%;
+}
+
+/* #5 app bar images */
+#channels h1 img {
+  margin-top: auto;
+}
+
+#chat h1 img {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+}
+
+.channel-meta {
+  position: absolute;
+  right: 0px;
+}
+
 
 
 /* CHANNELS LIST */
@@ -62,16 +114,32 @@ li.selected {
 li img {
     /* #4 #middle vertical alignment of icons in the #channels list */
     vertical-align: middle;
+    position: relative;
+    right: 0px;
 }
 
 /* TAB BAR */
 
 /* #4 #sweat #tab-bar */
-#tab-bar {
+
+#content {
+  background-color: pink;
+  min-height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+#tab-bar  {
     /* #3 #tab-bar #container should be white */
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
     text-align: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    width: 40%;
 }
 
 /* #4 add styles to #tab-bar #buttons */
@@ -79,7 +147,6 @@ li img {
     background-color: white;
     border: none;
     font-size: 13px;
-
     /* #4 #tab-bar buttons have a width of #one-third of the available space */
     width: 33%;
     height: 72px;
@@ -98,34 +165,58 @@ li img {
     border-bottom: 4px solid #3F51B5;
 }
 
+#channel ul {
+  position: absolute;
+  top: 70px;
+}
+
 
 /* MESSAGES */
 /* #4 select #specific #messages by class and re-assign element styles according to their #hierarchy in a nested way */
 .message {
     /* #3 #chat #width*/
     width: 80%;
-
     /* #4 align all #messages using #margins */
     margin-left: 2.5%;
-
     /* #4 #message distance to next message container*/
     margin-bottom: 8px;
+    margin-top: 8px;
+    font-size: 18px;
+    position: relative;
 }
 
+#message-container {
+  position: absolute;
+  top: 70px;
+  bottom: 72px;
+  overflow: auto;
+  width: 100%;
+}
 
 .message h3 {
     font-size: medium;
+      display: flex;
+      justify-content: space-between;
+      align-content: flex-end;
+      font-size: 18px;
 }
 
 .message h3 em {
     font-size: larger;
     font-style: normal;
+    display: inline-block;
+    width: 200px ;
+    text-align: right;
 }
 
-.message h3 a {
+.message h3 a strong {
     /* #3 #chat #link color is primary text */
     color: black;
+    display: inline-block;
+    width: 280px ;
+    text-decoration: underline;
 }
+
 
 .message p {
     background-color: white;
@@ -136,10 +227,49 @@ li img {
     background-color: #CDDC39;
     color: black;
     text-transform: uppercase;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    display: block;
 }
+
 
 /* #4 left align own #messages using #margins */
 .message.own {
     margin-left: 17.5%;
 }
 
+
+/* chat bar */
+#chat-bar button {
+  position: absolute;
+  left: 16px;
+
+}
+
+#chat-bar {
+  height: 72px;
+  background-color: white;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  line-height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+/* emoticons div */
+/* # 6 set the style */
+
+#emojis {
+  background-color: white;
+  border: 1px solid black;
+  padding: 16px;
+  margin-left: 16px;
+  height: 284px;
+  width: 284px;
+  position: absolute;
+  bottom: 60px;
+  font-size: 28px;
+  display: none;
+}

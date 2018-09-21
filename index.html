@@ -9,12 +9,13 @@
 
     <!-- #4 #sweat out the styles by creating an #external css -->
     <link rel="stylesheet" href="css/style.css" />
-
-    
+    <script  src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <!-- #4 #one #page -->
-<div id="channels">
+  <div id="channels">
+
     <h1>
         <!-- #3 #channels #moocus the talkative duck-->
         <img src="http://ip.lfe.mw.tum.de/sections/moocus.png" alt="Moocus, the chatty duck!" style="height: 56px;">
@@ -22,66 +23,86 @@
     </h1>
 
     <!-- #3 #channels #list is much better, than headlines or paragraphs... -->
-    <ul>
-        <li>#Yummy
+      <ul>
+        <li>
+          <span>#Yummy</span>
+          <span class="channel-meta">
             <!-- #3 #channels #favorite this is not starred -->
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
+            <img src="http://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="chevron">
+          </span>
         </li>
 
         <!-- #4 #channel is #highlighted -->
         <li class="selected">
-            #SevenContinents
+            <span>#SevenContinents</span>
+            <span class="channel-meta">
             <!-- #3 #channels #favorite this is starred -->
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
+            <img src="http://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="not starred">
+          </span>
         </li>
-        <li>#KillerApp
+        <li>
+            <span>#KillerApp</span>
+            <span class="channel-meta">
             <!-- #3 #channels #favorite this is not starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
+              <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
+              <img src="http://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="not starred">
+            </span>
         </li>
-        <li>#FirstPersonOnMars
+        <li >
+          <span onClick="switchChannel(this.innerHTML)">#FirstPersonOnMars</span>
+          <span class="channel-meta">
             <!-- #3 #channels #favorite this is starred -->
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
+            <img src="http://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="not starred">
+            </span>
         </li>
         <li>#Octoberfest
             <!-- #3 #channels #favorite this is not starred -->
+          <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
+            <img src="http://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="not starred">
+          </span>
         </li>
     </ul>
-
+  </div>
     <!-- #3 #tab-bar #container -->
     <!-- #4 #sweat #tab-bar -->
     <div id="tab-bar">
         <!-- #4 #tab-bar selected channel should be #highlighted -->
-        <button class="selected">
+        <button id="buttonBulb"class="selected" onclick="selectTab(this.id)">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Bulb">
             New
         </button>
-        <button>
+        <button  id="buttonHot"  onclick="selectTab(this.id)">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/fire.png" alt="Hot">
             Trending
         </button>
-        <button>
+        <button  id="buttonStar"  onclick="selectTab(this.id)">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star">
             Favorites
         </button>
     </div>
-</div>
-
 <!-- #4 #one #page -->
 <div id="chat">
-    <h1>
+    <h1 >
+      <span id='channelName'>
         #SevenContinents
-        <small>by
-            <strong>cheeses.yard.applies</strong>
+      </span>
+        <small> &nbsp; by
+            <strong ><span id="channelLink">cheeses.yard.applies</span></strong>
         </small>
+      <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="cat" onclick="unstar()">
     </h1>
 
     <!-- #3 #chat #container -->
     <!-- #4 assign a #class to all your #messages to address them with css -->
     <!-- #4 apply a class "own" to your #messages to align them separately with #margins -->
+    <div id="message-container">
     <div class="message own">
         <h3>
             <!-- #3 #chat #location points to w3w in a new tab -->
@@ -168,6 +189,12 @@
         </h3>
         <p>北京</p>
         <button>+5 min.</button>
+        </div>
+      </div>
+        <div id="chat-bar"><button id="emojis-button" onclick=toggleEmojis()><img
+   src="http://ip.lfe.mw.tum.de/sections/smile-o.png" alt="smiley">
+ </button><div id="emojis" > &#x1F602; &#x1F603;
+    &#x1F604; &#x1F605;</div>
     </div>
 </div>
 
