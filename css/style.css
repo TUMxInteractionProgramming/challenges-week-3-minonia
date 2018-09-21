@@ -29,15 +29,12 @@ button, strong {
 
 #channels ul{
   position: relative;
-  background-color: red;
   overflow: auto;
   position: absolute;
   top: 70px;
   bottom: 72px;
   width: 40%;
 }
-
-
 
 
 #chat{
@@ -78,12 +75,10 @@ h1 {
   right: 16px;
 }
 
-.channel-meta {
-  position: absolute;
-  right: 0px;
+#channelLink a {
+  color: white;
+  text-decoration: none;
 }
-
-
 
 /* CHANNELS LIST */
 
@@ -116,6 +111,12 @@ li img {
     vertical-align: middle;
     position: relative;
     right: 0px;
+}
+
+/* postions pictograms in channel bar */
+.channel-meta {
+  position: absolute;
+  right: 0px;
 }
 
 /* TAB BAR */
