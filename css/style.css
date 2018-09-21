@@ -13,8 +13,8 @@
 }
 
 html, body {
-  width: 320px;
-  height: 640px;
+  width: 100%;
+  height: 100%;
 }
 body {
     background-color: #F5F5F5;
@@ -43,7 +43,6 @@ button, strong {
   right: 0px;
   width: 60%;
   height: 100%;
-  width:
 }
 
 /* APP BAR */
@@ -59,11 +58,10 @@ h1 {
     display: flex;
     padding: 0 4%;
     line-height: 70px;
+    width: 100%;
 }
 
-#channels h1 {
-  width: 40%;
-}
+
 
 /* #5 app bar images */
 #channels h1 img {
