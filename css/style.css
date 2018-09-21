@@ -68,6 +68,10 @@ h1 {
   width: 100%;
 }
 
+
+#chat h1 {
+  font-size: 9px;
+}
 /* #5 app bar images */
 #channels h1 img {
   margin-top: auto;
@@ -99,7 +103,7 @@ li {
     box-sizing: border-box;
     height: 48px;
     padding: 16px;
-    font-size: 12px;
+    font-size: 10px;
     /* #4 #channel tiles are separated by #lines */
     border-bottom: 1px solid #F5F5F5;
 }
@@ -150,7 +154,7 @@ li img {
 #tab-bar button {
     background-color: white;
     border: none;
-    font-size: 8px;
+    font-size: 5px;
     /* #4 #tab-bar buttons have a width of #one-third of the available space */
     width: 33%;
     height: 72px;
