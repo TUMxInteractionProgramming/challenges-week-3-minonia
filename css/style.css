@@ -18,7 +18,6 @@ html, body {
 }
 body {
     background-color: #F5F5F5;
-    overflow: auto;
 }
 
 /* #4 # sweat #uppercase buttons and w3w locations */
@@ -33,7 +32,7 @@ button, strong {
   overflow: auto;
   position: absolute;
   top: 70px;
-  bottom: 70px;
+  bottom: 72px;
   width: 40%;
 }
 
@@ -54,22 +53,15 @@ h1 {
     color: white;
     display: block;
     height: 70px;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: normal;
     display: flex;
-    padding: 0 2%;
-
+    padding: 0 4%;
+    line-height: 70px;
 }
 
 #channels h1 {
   width: 40%;
-  line-height: 70px;
-}
-
-#chat h1 {
-  font-size: 12px;
-  overflow-wrap: break-word;
-  line-height: 70 px;
 }
 
 /* #5 app bar images */
@@ -155,10 +147,10 @@ li img {
 #tab-bar button {
     background-color: white;
     border: none;
-    font-size: 8px;
+    font-size: 13px;
     /* #4 #tab-bar buttons have a width of #one-third of the available space */
     width: 33%;
-    height: 70px;
+    height: 72px;
     padding: 16px;
 }
 
@@ -214,7 +206,7 @@ li img {
     font-size: larger;
     font-style: normal;
     display: inline-block;
-    width: 40% ;
+    width: 200px ;
     text-align: right;
 }
 
@@ -222,7 +214,7 @@ li img {
     /* #3 #chat #link color is primary text */
     color: black;
     display: inline-block;
-    width: 35%;
+    width: 280px ;
     text-decoration: underline;
 }
 
